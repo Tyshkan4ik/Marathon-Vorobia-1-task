@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     private lazy var viewSquare: UIView = {
         let view = UIView()
         view.backgroundColor = .brown
+        view.layer.cornerRadius = 20
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
