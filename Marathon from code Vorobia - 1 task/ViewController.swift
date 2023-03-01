@@ -13,6 +13,8 @@ class ViewController: UIViewController {
         let view = UIView()
         view.backgroundColor = .brown
         view.layer.cornerRadius = 20
+        view.layer.shadowOpacity = 0.7
+        view.layer.shadowRadius = 20
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
