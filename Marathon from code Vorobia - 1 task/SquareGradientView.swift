@@ -9,22 +9,23 @@ import UIKit
 
 class SquareGradientView: UIView {
     
-   private let gradient = CAGradientLayer()
+    private let gradient = CAGradientLayer()
     
-    init (radius: CGFloat, colorGradient: [CGColor], shadowOpacity: Float) {
+    init(
+        radius: CGFloat,
+        colorGradient: [UIColor],
+        shadowOpacity: Float,
+        shadowRadius: CGFloat = 20
+    ) {
         super.init(frame: .zero)
-        layer.shadowOpacity = 0.85
-        layer.shadowRadius = 20
         
-        gradient.cornerRadius = 20
+        gradient.cornerRadius = radius
         gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
         gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
-        gradient.frame = bounds
-        var colors = [CGColor]()
-        for color in colorGradient {
-            colors.append(color)
-        }
-        gradient.colors = colors
+        gradient.colors = colorGradient.map { $0.cgColor }
+        
+        layer.shadowOpacity = shadowOpacity
+        layer.shadowRadius = shadowRadius
         layer.addSublayer(gradient)
     }
     
@@ -36,5 +37,4 @@ class SquareGradientView: UIView {
         super.layoutSubviews()
         gradient.frame = bounds
     }
-    
 }
