@@ -9,7 +9,7 @@ import UIKit
 
 class SquareGradientView: UIView {
     
-    let gradient = CAGradientLayer()
+   private let gradient = CAGradientLayer()
     
     init (radius: CGFloat, colorGradient: [CGColor], shadowOpacity: Float) {
         super.init(frame: .zero)
