@@ -9,12 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private var sideLenghtSquare = 150
+    private enum Constants {
+        static let sideLenghtSquare: CGFloat = 150
+        static let xPosition: CGFloat = 100
+    }
     
-    private lazy  var viewSquare: UIView = {
-        let view = UIView()
-        view.layer.shadowOpacity = 0.85
-        view.layer.shadowRadius = 20
+    private lazy var viewSquare: SquareGradientView = {
+        let view = SquareGradientView(
+            radius: 20,
+            colorGradient: [
+                UIColor.blue,
+                UIColor.cyan
+            ],
+            shadowOpacity: 0.8
+        )
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -26,38 +34,17 @@ class ViewController: UIViewController {
         setupConstraints()
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        setupRadiusAndGradientLayer(colorsGradirn: [UIColor.blue.cgColor, UIColor.cyan.cgColor])
-    }
-    
     private func setupView() {
         view.addSubview(viewSquare)
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            viewSquare.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 100),
+            viewSquare.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: Constants.xPosition),
             viewSquare.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             
-            viewSquare.heightAnchor.constraint(equalToConstant: CGFloat(sideLenghtSquare)),
-            viewSquare.widthAnchor.constraint(equalToConstant: CGFloat(sideLenghtSquare))
+            viewSquare.heightAnchor.constraint(equalToConstant: Constants.sideLenghtSquare),
+            viewSquare.widthAnchor.constraint(equalToConstant: Constants.sideLenghtSquare)
         ])
     }
-    
-    private func setupRadiusAndGradientLayer(colorsGradirn: [CGColor]) {
-        let gradient = CAGradientLayer()
-
-        gradient.cornerRadius = 20
-       gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
-        gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
-        gradient.frame = viewSquare.bounds
-        var colors = [CGColor]()
-        for color in colorsGradirn {
-            colors.append(color)
-        }
-        gradient.colors = colors
-        viewSquare.layer.addSublayer(gradient)
-    }
 }
-
