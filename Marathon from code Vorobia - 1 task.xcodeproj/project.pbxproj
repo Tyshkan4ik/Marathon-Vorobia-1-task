@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8129291E29B0A12800598FEF /* SquareGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8129291D29B0A12800598FEF /* SquareGradientView.swift */; };
 		81B9B3ED29AF44A300B9A588 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B9B3EC29AF44A300B9A588 /* AppDelegate.swift */; };
 		81B9B3EF29AF44A300B9A588 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B9B3EE29AF44A300B9A588 /* SceneDelegate.swift */; };
 		81B9B3F129AF44A300B9A588 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B9B3F029AF44A300B9A588 /* ViewController.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8129291D29B0A12800598FEF /* SquareGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareGradientView.swift; sourceTree = "<group>"; };
 		81B9B3E929AF44A300B9A588 /* Marathon from code Vorobia - 1 task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marathon from code Vorobia - 1 task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B9B3EC29AF44A300B9A588 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81B9B3EE29AF44A300B9A588 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				81B9B3EC29AF44A300B9A588 /* AppDelegate.swift */,
 				81B9B3EE29AF44A300B9A588 /* SceneDelegate.swift */,
 				81B9B3F029AF44A300B9A588 /* ViewController.swift */,
+				8129291D29B0A12800598FEF /* SquareGradientView.swift */,
 				81B9B3F529AF44A400B9A588 /* Assets.xcassets */,
 				81B9B3F729AF44A400B9A588 /* LaunchScreen.storyboard */,
 				81B9B3FA29AF44A400B9A588 /* Info.plist */,
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81B9B3F129AF44A300B9A588 /* ViewController.swift in Sources */,
+				8129291E29B0A12800598FEF /* SquareGradientView.swift in Sources */,
 				81B9B3ED29AF44A300B9A588 /* AppDelegate.swift in Sources */,
 				81B9B3EF29AF44A300B9A588 /* SceneDelegate.swift in Sources */,
 			);
